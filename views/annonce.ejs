@@ -1,0 +1,25 @@
+<main>
+    <div class="annonce">
+    <h2>Ledige kontorpladser</h2>
+    
+    <table>
+        <tr>
+            <th>Navn</th>
+            <th>Adresse</th>
+            <th>Pladser</th>
+            <th>Pris</th>
+            <th>Billede</th>
+        </tr>
+    <% (annonce || []).forEach(annonce => { %>
+        <tr>
+        <td><%= annonce.navn %></td>
+        <td><%= annonce.adresse %></td>
+        <td><%= annonce.pladser %></td>
+        <td><%= annonce.pris %> DKK</td>
+        <td><%= annonce.billede %></td>
+        </tr>
+    <% }); %>
+
+    </table>
+</div>
+</main>
