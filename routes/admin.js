@@ -23,10 +23,9 @@ module.exports = (app) => {
     app.post('/admin', (req, res, next) => {
         console.log(req.fields);
         // res.send();
-        db.query(`INSERT INTO annonce (navn, adresse, pladser, pris, billede) VALUES (?, ?, ?, ?, ?);`, 
-        [req.fields.navn, req.fields.adresse, req.fields.pladser, req.fields.pris, req.fields.billede], (err, results) => {
+        db.query(`INSERT INTO annonce (lokale, adresse, pladser, pris, billede) VALUES (?, ?, ?, ?, ?);`, 
+        [req.fields.lokale, req.fields.adresse, req.fields.pladser, req.fields.pris, req.fields.billede], (err, results) => {
                 if (err) { res.send(err); return; }
-
                 res.redirect('/admin');
             });
     });

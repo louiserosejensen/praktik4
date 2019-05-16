@@ -1,0 +1,26 @@
+<% include ./partials/header %>
+<main>
+    <h1>This is your admin page - welcome!</h1>
+    <a href="/logud">Log Ud</a>
+    <a href="/annonceedit">Administrer annoncer</a>
+
+    <form id="annonce" method="post" class="form-inline">
+        <div class="form-group">
+            <label for="navn">Lokale</label>
+            <input type="text" name="lokale" class="form-control" id="navn" value="<%= 
+                (typeof(mainResults) != 'undefined' && typeof(mainResults.lokale) != 'undefined') ? mainResults.lokale : '' %>">
+            <label for="navn">Adresse</label>
+            <input type="text" name="adresse" class="form-control" id="adresse" value="<%= 
+            (typeof(mainResults) != 'undefined' && typeof(mainResults.adresse) != 'undefined') ? mainResults.adresse : '' %>">
+            <label for="navn">Antal pladser</label>
+            <input type="text" name="pladser" class="form-control" id="pladser" value="<%= 
+            (typeof(mainResults) != 'undefined' && typeof(mainResults.pladser) != 'undefined') ? mainResults.pladser : '' %>">
+            <label for="navn">Pris</label>
+            <input type="text" name="pris" class="form-control" id="pris" value="<%= 
+            (typeof(mainResults) != 'undefined' && typeof(mainResults.pris) != 'undefined') ? mainResults.pris : '' %>">
+            <label for="navn">Billede</label>
+            <input type="text" name="billede" class="form-control" id="billede" value="<%= 
+            (typeof(mainResults) != 'undefined' && typeof(mainResults.billede) != 'undefined') ? mainResults.billede : '' %>">
+            <button type="submit">Opret</button>
+        </div>
+</main>

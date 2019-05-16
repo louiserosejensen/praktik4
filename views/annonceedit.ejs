@@ -1,0 +1,29 @@
+<main>
+    <div class="annonceedit">
+        <h2>Annoncer</h2>
+        
+        <table>
+            <tr>
+                <th>Lokale</th>
+                <th>Adresse</th>
+                <th>Antal pladser</th>
+                <th>Pris</th>
+                <th>Billede</th>
+                <th>Rediger</th>
+                <th>Slet</th>
+            </tr>
+        <% annonceedit.forEach(annonce => { %>
+            <tr>
+            <td><%= annonce.lokale %></td>
+            <td><%= annonce.adresse %></td>
+            <td><%= annonce.pladser %></td>
+            <td><%= annonce.pris %> DKK</td>
+            <td><%= annonce.billede %> </td>
+            <td><a href="/annonceedit/edit/<%= annonce.id %>">Rediger</a></td>
+            <td><a href="#">Slet</a></td>
+            </tr>
+        <% }); %>
+
+        </table>
+    </div>
+</main>
